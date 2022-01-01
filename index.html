@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"></link>
+    <title>Group Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="data.js"></script>
+</head>
+<body>
+    <div id="author">
+        <div class="left">
+            <div id="img"><img src="uek_logo.png"/></div>
+            <span style="font-size: 4vh; font-weight: 700; color: rgb(119,30,30); letter-spacing: 4px;">PROJEKT GRUPOWY</span><br><br>
+            Jarosław Kołdun, Michał Marzec, Marcel Kubica<br><br><br>
+            Tabela obok przedstawia 100 rekordów losowo wygenerowanych danych studentów Informatyki Stosowanej oraz Applied Informatics. 
+            <br><br>
+            Przedstawione dane to kolejno: imię, nazwisko, data urodzenia, płeć, numer albumu, grupa dziekańska, pierwszy język, drugi język, należności do zapłacenia oraz czy student zamieszkuje uniwersytecki akademik
+            <br><br>
+            Poniżej można zobaczyć dwa wykresy wygenerowane z pobranych danych. Do ich utworzenia użyliśmy framework'ów. 
+            <br><br>
+            *tutaj pojawi się więcej tekstu opisującego wykresy poniżej (przedstawione dane, jakiego frameworku użyliśmy, itp.)*
+            <br><br>
+            <button onclick="var elmntToView = document.getElementById('data'); elmntToView.scrollIntoView({behavior: 'smooth'}); " id="button1">Więcej</button>
+        </div>
+        <div class="right">
+            <div class="scroll-table">
+                <table class="students">
+                    <thead>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Birth date</th>
+                        <th>Gender</th>
+                        <th>Index number</th>
+                        <th>Group</th>
+                        <th>Fisrt language</th>
+                        <th>Second language</th>
+                        <th>Due</th>
+                        <th>University dormitory</th>
+                    </thead>
+                </table>
+                <div class="scroll-table-body">
+                    <table>
+                        <tbody id="target"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="data">
+        <div class="left">
+            
+
+        </div>
+        <div class="right">
+
+        </div>
+    </div>
+</body>
+</html>
