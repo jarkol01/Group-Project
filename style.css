@@ -120,12 +120,19 @@ body
 }
 
 
+.scroll-table
+{
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 74vh;
+    border-bottom: 1px solid #eee;
+}
 
 .scroll-table table
 {
     border-collapse: collapse;
     width: 100%;
-    table-layout: fixed;
+    table-layout: auto;
 }
 tr:nth-child(odd)
 {
@@ -135,26 +142,23 @@ tr:nth-child(even)
 {
     background-color: #eee;
 }
-.scroll-table-body {
-	height: 74vh;
-	overflow-x: auto;
-	border-bottom: 1px solid #eee;
-}
 .scroll-table thead th {
 	font-weight: bold;
     font-size: 1.7vh;
-	text-align: left;
+	text-align: center;
 	border: none;
 	padding: 1vh 1vh;
 	background-color: #333;
     color: white;
+    position: sticky;
+    top: 0;
 }
 .scroll-table tbody td {
-	text-align: left;
+	text-align: center;
     font-size: 1.5vh;
 	border-left: 1px solid #ddd;
 	border-right: 1px solid #ddd;
-	padding: 10px 15px;
+	padding: 10px 10px;
 	vertical-align: top;
 }
 
