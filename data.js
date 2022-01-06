@@ -10,7 +10,7 @@ connection.addEventListener("load", e => {
     if (connection.status === 200) {
         const json = JSON.parse(connection.response);
 
-        for (let row of _data) {
+        for (let row of json) {
             let str = `
 <tr>
     <td>${row["first_name"]}</td>
@@ -27,7 +27,7 @@ connection.addEventListener("load", e => {
             document.getElementById("target").innerHTML += str;
         }
 
-        for (let row of _data) {
+        for (let row of json) {
 
             updateDataSet(personCount, row["group"]);
             updateDataSet(foreignLanguagePercentage, row["second_language"]);
