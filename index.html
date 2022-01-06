@@ -4,28 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="style.css">
     <title>Group Project</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Inlcude chart.js library and necessary plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script src="utils.js"></script>
+    <script src="charts.js"></script>
     <script src="data.js"></script>
 </head>
 <body>
     <div id="author">
         <div class="left">
-            <div id="img"><img src="uek_logo.png"/></div>
-            <span style="font-size: 4vh; font-weight: 700; color: rgb(119,30,30); letter-spacing: 4px;">PROJEKT GRUPOWY</span><br><br>
-            Jarosław Kołdun, Michał Marzec, Marcel Kubica<br><br><br>
-            Tabela obok przedstawia 100 rekordów losowo wygenerowanych danych studentów Informatyki Stosowanej oraz Applied Informatics. 
+            <div id="img"><img src="uek_logo.png" /></div>
+            <span style="font-size: 4vh; font-weight: 700; color: rgb(119,30,30); letter-spacing: 4px;">PROJEKT
+                GRUPOWY</span>
             <br><br>
-            Przedstawione dane to kolejno: imię, nazwisko, data urodzenia, płeć, numer albumu, grupa dziekańska, pierwszy język, drugi język, należności do zapłacenia oraz czy student zamieszkuje uniwersytecki akademik
+            Jarosław Kołdun, Michał Marzec, Marcel Kubica
+            <br><br><br>
+            Tabela obok przedstawia 100 rekordów losowo wygenerowanych danych studentów Informatyki Stosowanej oraz
+            Applied Informatics.
             <br><br>
-            Poniżej można zobaczyć dwa wykresy wygenerowane z pobranych danych. Do ich utworzenia użyliśmy framework'ów. 
+            Przedstawione dane to kolejno: imię, nazwisko, data urodzenia, płeć, numer albumu, grupa dziekańska,
+            pierwszy język, drugi język, należności do zapłacenia oraz czy student zamieszkuje uniwersytecki akademik
             <br><br>
-            *tutaj pojawi się więcej tekstu opisującego wykresy poniżej (przedstawione dane, jakiego frameworku użyliśmy, itp.)*
+            Poniżej można zobaczyć dwa wykresy wygenerowane z pobranych danych. Do ich utworzenia użyliśmy framework'ów.
             <br><br>
-            <button onclick="var elmntToView = document.getElementById('data'); elmntToView.scrollIntoView({behavior: 'smooth'}); " id="button1">Więcej</button>
+            *tutaj pojawi się więcej tekstu opisującego wykresy poniżej (przedstawione dane, jakiego frameworku
+            użyliśmy, itp.)*
+            <br><br>
+            <button
+                onclick="var elmntToView = document.getElementById('data'); elmntToView.scrollIntoView({behavior: 'smooth'}); "
+                id="button1">Więcej</button>
         </div>
         <div class="right">
             <div class="scroll-table">
@@ -52,12 +65,19 @@
 
     <div id="data">
         <div class="left">
-            
 
         </div>
         <div class="right">
-
+            <div class="charts">
+                <div class="chart1">
+                    <canvas id="chart1"></canvas>
+                </div>
+                <div class="chart2">
+                    <canvas id="chart2"></canvas>
+                </div>
+            </div>
         </div>
     </div>
 </body>
+
 </html>
