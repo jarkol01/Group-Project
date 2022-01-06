@@ -6,7 +6,7 @@ function createChart1(_data) {
         labels: _data[0],
         datasets: [
             {
-                label: 'Person count',
+                label: "Person count",
                 backgroundColor: [
                     "rgb(255, 99, 132)", "rgb(255, 159, 64)",
                     "rgb(255, 205, 86)", "rgb(75, 192, 192)",
@@ -19,14 +19,14 @@ function createChart1(_data) {
     };
 
     const chartConfig = {
-        type: 'doughnut',
+        type: "doughnut",
         data: chartData,
         options: {
             responsive: true,
             plugins: {
                 title: {
                     display: true,
-                    text: 'Person count of each group',
+                    text: "Number of students in a group",
                     font: {
                         size: 25
                     }
@@ -41,7 +41,7 @@ function createChart1(_data) {
                         let percentage = (value * 100 / sum) + "%";
                         return percentage;
                     },
-                    color: '#fff',
+                    color: "#fff",
                 }
             },
             scales: {
@@ -54,7 +54,7 @@ function createChart1(_data) {
             }
         }
     };
-    new Chart(document.getElementById('chart1'), chartConfig);
+    new Chart(document.getElementById("chart1"), chartConfig);
 }
 
 function createChart2(_data1, _data2) {
@@ -62,41 +62,74 @@ function createChart2(_data1, _data2) {
         labels: _data1[0].map((v) => monthNames[v - 1]),
         datasets: [
             {
-                label: 'First Name',
-                backgroundColor: 'rgb(255, 99, 132)',
+                label: "First Name",
+                backgroundColor: "rgb(255, 99, 132)",
                 data: _data1[1]
             },
             {
-                label: 'Last Name',
-                backgroundColor: 'rgb(75, 192, 192)',
+                label: "Last Name",
+                backgroundColor: "rgb(75, 192, 192)",
                 data: _data2[1]
             }
         ]
     };
 
     const chartConfig = {
-        type: 'bar',
+        type: "bar",
         data: chartData,
         options: {
+            responsive: true,
             plugins: {
                 title: {
                     display: true,
-                    text: 'Popularity of names that start with a vowel of students born in a particular month',
+                    text: "Popularity of names that start with a vowel of students born in a particular month",
                     font: {
                         size: 25
                     }
                 }
-            },
-            responsive: true,
-            scales: {
-                x: {
-                    stacked: true,
-                },
-                y: {
-                    stacked: true
-                },
             }
         }
     };
-    new Chart(document.getElementById('chart2'), chartConfig);
+    new Chart(document.getElementById("chart2"), chartConfig);
+}
+
+function createChart3(_data) {
+    const chartData = {
+        labels: _data[0],
+        datasets: [
+            {
+                label: "First language",
+                backgroundColor: "rgb(255,166,77)",
+                data: _data[1],
+                order: 1
+            },
+            {
+                label: "Foreign language",
+                backgroundColor: "rgb(77, 166, 255)",
+                borderColor: "rgb(77, 166, 255)",
+                data: _data[2],
+                type: "line",
+                order: 0
+            }
+        ]
+    };
+
+    const chartConfig = {
+        type: "bar",
+        data: chartData,
+        options: {
+            responsive: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: "Variety of languages spoken by students",
+                    font: {
+                        size: 25
+                    }
+                }
+            }
+        },
+    };
+
+    new Chart(document.getElementById("chart3"), chartConfig);
 }

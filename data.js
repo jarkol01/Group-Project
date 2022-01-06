@@ -2,7 +2,7 @@ const connection = new XMLHttpRequest;
 
 // Filtered data from macaroo to easily display them on a chart
 const personCount = [[], []];
-const foreignLanguagePercentage = [[], []];
+const languagesCount = [[], [], []];
 const firstNames = [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
 const lastNames = [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
 
@@ -30,7 +30,6 @@ connection.addEventListener("load", e => {
         for (let row of json) {
 
             updateDataSet(personCount, row["group"]);
-            updateDataSet(foreignLanguagePercentage, row["second_language"]);
 
             let month = getMonthFromStringDate(row["birth_date"]);
             let firstNameLetter = row["first_name"][0];
@@ -38,15 +37,18 @@ connection.addEventListener("load", e => {
                 updateDataSet(firstNames, month);
             };
 
-            let lastNameLetter = row["first_name"][0];
+            let lastNameLetter = row["last_name"][0];
             if (isVowel(lastNameLetter)) {
                 updateDataSet(lastNames, month);
             }
+
+            updateDataSetI(languagesCount, row["first_language"], 1);
+            updateDataSetI(languagesCount, row["second_language"], 2);
         }
 
         createChart1(personCount);
         createChart2(firstNames, lastNames);
-        createChart3(foreignLanguagePercentage);
+        createChart3(languagesCount);
     }
 });
 
