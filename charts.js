@@ -13,6 +13,12 @@ function createChart1(_data) {
                     "rgb(54, 162, 235)", "rgb(153, 102, 255)",
                     "rgb(201, 203, 207)"
                 ],
+                borderColor: [
+                    "rgb(255, 99, 132)", "rgb(255, 159, 64)",
+                    "rgb(255, 205, 86)", "rgb(75, 192, 192)",
+                    "rgb(54, 162, 235)", "rgb(153, 102, 255)",
+                    "rgb(201, 203, 207)"
+                ],
                 data: _data[1]
             }
         ]
@@ -29,7 +35,8 @@ function createChart1(_data) {
                     text: "Number of students in a group",
                     font: {
                         size: 25
-                    }
+                    },
+                    color: "white"
                 },
                 datalabels: {
                     formatter: (value, ctx) => {
@@ -41,7 +48,7 @@ function createChart1(_data) {
                         let percentage = (value * 100 / sum) + "%";
                         return percentage;
                     },
-                    color: "#fff",
+                    color: "white"
                 }
             },
             scales: {
@@ -51,7 +58,8 @@ function createChart1(_data) {
                 y: {
                     display: false,
                 }
-            }
+            },
+            color: "white"
         }
     };
     new Chart(document.getElementById("chart1"), chartConfig);

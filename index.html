@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,6 +17,7 @@
     <script src="charts.js"></script>
     <script src="data.js"></script>
 </head>
+
 <body>
     <div id="author">
         <div class="left">
@@ -31,10 +33,7 @@
             Przedstawione dane to kolejno: imię, nazwisko, data urodzenia, płeć, numer albumu, grupa dziekańska,
             pierwszy język, drugi język, należności do zapłacenia oraz czy student zamieszkuje uniwersytecki akademik
             <br><br>
-            Poniżej można zobaczyć dwa wykresy wygenerowane z pobranych danych. Do ich utworzenia użyliśmy framework'ów.
-            <br><br>
-            *tutaj pojawi się więcej tekstu opisującego wykresy poniżej (przedstawione dane, jakiego frameworku
-            użyliśmy, itp.)*
+            Poniżej można zobaczyć trzy wykresy wygenerowane z pobranych danych. Do ich utworzenia użyliśmy frameworks chart.js.
             <br><br>
             <button
                 onclick="var elmntToView = document.getElementById('data'); elmntToView.scrollIntoView({behavior: 'smooth'}); "
@@ -65,18 +64,23 @@
 
     <div id="data">
         <div class="left">
-
+            <div class="charts">
+                <div class="row">
+                    <div class="chart">
+                        <canvas id="chart1"></canvas>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="right">
             <div class="charts">
-                <div class="chart1">
-                    <canvas id="chart1"></canvas>
-                </div>
-                <div class="chart2">
-                    <canvas id="chart2"></canvas>
-                </div>
-                <div class="chart3">
-                    <canvas id="chart3"></canvas>
+                <div class="row">
+                    <div class="chart">
+                        <canvas id="chart2"></canvas>
+                    </div>
+                    <div class="chart">
+                        <canvas id="chart3"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
