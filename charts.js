@@ -70,7 +70,7 @@ function createChart2(_data1, _data2) {
         labels: _data1[0].map((v) => monthNames[v - 1]),
         datasets: [
             {
-                label: "Imie",
+                label: "Imię",
                 backgroundColor: "rgb(255, 99, 132)",
                 data: _data1[1]
             },
