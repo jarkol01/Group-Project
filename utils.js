@@ -1,6 +1,6 @@
 let monthNames = [
     "Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec",
-    "Lipiec", "Śierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"
+    "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"
 ]
 
 /*
