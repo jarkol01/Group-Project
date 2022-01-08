@@ -1,8 +1,21 @@
 let monthNames = [
-    "Januray", "Febuary", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
+    "Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec",
+    "Lipiec", "Śierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"
 ]
 
+/*
+    Stores a translation map between english-polish language names
+*/
+let languagesMap = {
+    "english": "j. angielski",
+    "polish": "j. polski",
+    "german": "j. niemiecki",
+    "spanish": "j. hiszpański",
+    "italian": "j. włoski",
+    "chinese": "j. chiński",
+    "french": "j. francuski",
+    "russian": "j. rosyjski"
+}
 /*
     Returns month number [1; 12]
 */
@@ -30,6 +43,13 @@ function updateDataSet(dataSet, key) {
     updateDataSetI(dataSet, key, 1);
 }
 
+/*
+    Updates a Data Set object for a given key and index
+    with a starting value 1 incremented in subsequent calls.
+    Supports variable number of subsets.
+    Data Set is 2D array: [[], []...]
+    where '[]...' detonates 1 or more array.
+*/
 function updateDataSetI(dataSet, key, index) {
     let pos = -1;
 

@@ -6,7 +6,7 @@ function createChart1(_data) {
         labels: _data[0],
         datasets: [
             {
-                label: "Person count",
+                label: "Liczba osób",
                 backgroundColor: [
                     "rgb(255, 99, 132)", "rgb(255, 159, 64)",
                     "rgb(255, 205, 86)", "rgb(75, 192, 192)",
@@ -32,7 +32,7 @@ function createChart1(_data) {
             plugins: {
                 title: {
                     display: true,
-                    text: "Number of students in a group",
+                    text: "Liczba studentów w grupie",
                     font: {
                         size: 25
                     },
@@ -70,12 +70,12 @@ function createChart2(_data1, _data2) {
         labels: _data1[0].map((v) => monthNames[v - 1]),
         datasets: [
             {
-                label: "First Name",
+                label: "Imie",
                 backgroundColor: "rgb(255, 99, 132)",
                 data: _data1[1]
             },
             {
-                label: "Last Name",
+                label: "Nazwisko",
                 backgroundColor: "rgb(75, 192, 192)",
                 data: _data2[1]
             }
@@ -90,7 +90,7 @@ function createChart2(_data1, _data2) {
             plugins: {
                 title: {
                     display: true,
-                    text: "Popularity of names that start with a vowel of students born in a particular month",
+                    text: "Ranking inicjałów, które są samogłoskami uczniów urodzonych w danym miesiącu",
                     font: {
                         size: 25
                     }
@@ -103,16 +103,16 @@ function createChart2(_data1, _data2) {
 
 function createChart3(_data) {
     const chartData = {
-        labels: _data[0],
+        labels: _data[0].map((v) => languagesMap[v]),
         datasets: [
             {
-                label: "First language",
+                label: "Język ojczysty",
                 backgroundColor: "rgb(255,166,77)",
                 data: _data[1],
                 order: 1
             },
             {
-                label: "Foreign language",
+                label: "Język obcy",
                 backgroundColor: "rgb(77, 166, 255)",
                 borderColor: "rgb(77, 166, 255)",
                 data: _data[2],
@@ -130,7 +130,7 @@ function createChart3(_data) {
             plugins: {
                 title: {
                     display: true,
-                    text: "Variety of languages spoken by students",
+                    text: "Różnorodność języków, którymi posługują się studenci",
                     font: {
                         size: 25
                     }
